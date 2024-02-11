@@ -56,33 +56,32 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            // --------------------------------------------------------------------------------
-            // | NONE |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | NONE |
-            // | NONE |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | NONE |
-            // | NONE |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | NONE |
-            //                    |     |     |     |   |     |      |     |
-            bindings = <
-                &none    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &none
-                &none    &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &none
-                &none    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &none
-                &mt LALT TAB &mt LGUI BACKSPACE &lt 1 SPACE &lt 2 RET &mt RSHIFT ESC &mt RCTRL DEL 
-                >;
-        };
-
-        numpad_layer {
-            // -----------------------------------------------------------------------------------------
-            // |      |     |     |     |     |     |   |  -  |  7  |  8  |  9  |  /  |      |
-            // |      |     |  "  |  '  |  ~  |  `  |   |  +  |  4  |  5  |  6  |  *  |      |
-            // |      |     |     |     |     |     |   |  0  |  1  |  2  |  3  |  .  |      |
-            //                    |     |     |     |   |     |     |     |
-            bindings = <
-                &trans &trans &trans &trans &trans &trans &kp MINUS &kp N7 &kp N8 &kp N9 &kp FSLH &trans
-                &trans &trans &DQT   &SQT   &GRAVE &TILDE &kp PLUS  &kp N4 &kp N5 &kp N6 &kp STAR &trans
-                &trans &trans &trans &trans &trans &trans &kp N0    &kp N1 &kp N2 &kp N3 &kp DOT  &trans
-                &trans &trans &trans &trans &trans &trans
-                >;
-        };
+                default_layer {
+// -----------------------------------------------------------------------------------------
+// | NONE |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | NONE |
+// | NONE |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | NONE |
+// | NONE |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | NONE |
+//                    |LCTRL| LGUI|1/SPC|   |2/ENT| RSE  | ESC/ALT |
+                        bindings = <
+   &none    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &none
+   &none    &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &none
+   &none    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &none
+                  &kp LEFT_CONTROL &kp LGUI &lt 1 SPACE   &lt 2 RET &mo 2 &mt RIGHT_ALT ESC
+                        >;
+                };
+                lower_layer {
+// -----------------------------------------------------------------------------------------
+// | TRANS|  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | TRANS|
+// | TRANS| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |  `  | TRANS|
+// | TRANS|     |     |     |     |     |   |  '  |  "  |     |     |  ~  | TRANS|
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &trans   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
+   &trans   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp GRAVE &trans
+   &trans   &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &kp TILDE &trans
+                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                        >;
+                };
 
         symbol_layer {
             // -------------------------------------------------------------------------------
