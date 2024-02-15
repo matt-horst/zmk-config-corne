@@ -20,7 +20,7 @@
             bindings = <
 &none  &kp Q  &kp W  &kp F             &kp P         &kp B          &kp J        &kp L                      &kp U             &kp Y    &kp SEMICOLON  &none
 &none  &kp A  &kp R  &kp S             &kp T         &kp G          &kp M        &kp N                      &kp E             &kp I    &kp O          &none
-&none  &kp Z  &kp X  &kp C             &kp D         &kp V          &kp K        &kp H                      &kp COMMA         &kp DOT  &kp FSLH       &none
+&none  &mt LCTRL Z  &mt LALT X  &kp C             &kp D         &kp V          &kp K        &kp H                      &kp COMMA         &mt RALT DOT  &mt RCTRL FSLH       &none
                   &mt LGUI TAB &mt LSHIFT ESC &lt 1 SPACE   &lt 2 RET &mt RSHIFT ESC &mt LGUI DEL
             >;
         };
@@ -34,7 +34,7 @@
                         bindings = <
    &trans   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8   &kp N9    &kp N0    &trans
    &trans   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp GRAVE &trans
-   &trans   &trans       &trans       &trans       &trans       &kp TAB        kp SQT   &kp DQT  &kp BSPC &kp DEL   &kp TILDE &trans
+   &trans   &trans       &trans       &trans       &trans       &kp TAB        &kp SQT   &kp DQT  &kp BSPC &kp DEL   &kp TILDE &trans
                                     &kp LCTRL     &kp LGUI       &kp SPACE      &kp RET  &kp RSHIFT &kp RALT
                         >;
                 };
