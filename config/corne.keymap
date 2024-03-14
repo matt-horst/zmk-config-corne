@@ -19,43 +19,43 @@
             // -----------------------------------------------------------------------------------------
             // | TRANS|  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  | BSPC| TRANS|
             // | TRANS|  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  | TRANS|
-            // | TRANS|  Z  |  X  |  C  |  D  |  V  |   |  K  |  H  |  <  |  >  |  /  | TRANS|
+            // | TRANS|  Z  |  X  |  C  |  D  |  V  |   |  K  |  H  |  ,  |  .  |  /  | TRANS|
             //--------------------|     |     |     |---|     |     |     |-------------------
             // -------------------------------------------------------------------------------
             bindings = <
                 &none  &kp Q        &kp W       &kp F &kp P &kp B &kp J &kp L &kp U     &kp Y        &kp BSPC       &none
                 &none  &kp A        &kp R       &kp S &kp T &kp G &kp M &kp N &kp E     &kp I        &kp O          &none
                 &none  &mt LCTRL Z  &mt LALT X  &kp C &kp D &kp V &kp K &kp H &kp COMMA &mt RALT DOT &mt RCTRL FSLH &none
-                &mt LGUI BSPC &lt 3 TAB &lt 1 SPACE &lt 2 RET &mt RSHIFT ESC &mt RCTRL DEL
+                &mt LGUI DEL &mt LSHIFT TAB &lt 1 SPACE &lt 2 RET &mt RSHIFT ESC &mt RCTRL BSPC
                 >;
         };
 
         lower_layer {
             // -----------------------------------------------------------------------------------------
             // | TRANS|  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | TRANS|
-            // | TRANS| ALT | CTR | GUI | SHFT| CAPS|   | LFT | DWN |  UP | RGT |  `  | TRANS|
-            // | TRANS|     |     |     |     |     |   |  '  |  "  |     |     |  ~  | TRANS|
+            // | TRANS| ALT | CTR | GUI | SHFT| CAPS|   | LFT | DWN |  UP | RGT | CAPS| TRANS|
+            // | TRANS| UNDO| CUT | CPY | PST |     |   | INS | PGDN| PGUP| HOME| END | TRANS|
             //--------------------|     |     |     |---|     |     |     |-------------------
             // -------------------------------------------------------------------------------
             bindings = <
-                &trans  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6   &kp N7   &kp N8 &kp N9    &kp N0    &trans
-                &trans  &sk LALT &sk LCTRL &sk LGUI &sk LSHIFT &caps_word &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp GRAVE &trans
-                &trans  &trans &trans &trans &trans &trans &kp SQT  &kp DQT  &trans &trans    &kp TILDE &trans
+                &trans  &kp N1    &kp N2    &kp N3    &kp N4     &kp N5     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0     &trans
+                &trans  &sk LALT  &sk LCTRL &sk LGUI  &sk LSHIFT &caps_word &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &caps_word &trans
+                &trans  &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)  &trans     &kp INS  &kp PG_DN &kp PG_UP &HOME     &kp END    &trans
                 &trans  &trans &trans &trans &trans &trans
                 >;
         };
 
         symbol_layer {
             // -------------------------------------------------------------------------------
-            // |      |  !  |  @  |  #  |  $  |  %  |---|  ^  |  &  |  *  |  (  |  )  |      |
-            // |      |  '  |  "  |  ;  |  :  |     |---|  -  |  =  |  [  |  ]  |  \  |      |
-            // |      |     |     |     |     |     |---|  _  |  +  |  {  |  }  | "|" |      |
+            // |      |  '  |  <  |  >  |  "  |  _  |---|  &  |  ;  |  ]  |  [  |  %  |      |
+            // |      |  !  |  -  |  +  |  =  |  #  |---|  |  |  :  |  )  |  (  |  ?  |      |
+            // |      |  ^  |  /  |  *  |  \  |  `  |---|  @  |  $  |  }  |  {  |  ~  |      |
             //--------------------|     |     |     |---|     |     |     |-------------------
             // -------------------------------------------------------------------------------
             bindings = <
-                &trans &kp EXCL &kp AT  &kp HASH      &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp STAR &kp LPAR &kp RPAR &trans
-                &trans &kp SQT  &kp DQT &kp SEMICOLON &kp COLON &trans      &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH &trans
-                &trans &trans   &trans  &trans        &trans    &trans      &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &trans
+                &trans &kp SQT   &kp LT     &kp GT   &kp DQT    &kp UNDER &kp AMPS &kp SEMI  &kp RBKT &kp LBKT &kp PRCNT &trans
+                &trans &kp EXCL  &kp MINUS  &kp PLUS &kp EQUAL  &kp HASH  &kp PIPE &kp COLON &kp RPAR &kp LPAR &kp QMARK &trans
+                &trans &kp CARET &kp FSLH   &kp STAR &kp BSLH   &kp GRAVE &kp AT   &kp DLLR  &kp RBRC &kp LBRC &kp TILDE &trans
                 &trans &trans &trans &trans &trans &trans
                 >;
         };
