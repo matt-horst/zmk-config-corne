@@ -34,13 +34,13 @@
             // -----------------------------------------------------------------------------------------
             // | TRANS|  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | TRANS|
             // | TRANS| ALT | CTR | GUI | SHFT| CAPS|   | LFT | DWN |  UP | RGT | CAPS| TRANS|
-            // | TRANS| UNDO| CUT | CPY | PST |     |   | INS | PGDN| PGUP| HOME| END | TRANS|
+            // | TRANS| UNDO| CUT | CPY | PST | TMUX|   | INS | PGDN| PGUP| HOME| END | TRANS|
             //--------------------|     |     |     |---|     |     |     |-------------------
             // -------------------------------------------------------------------------------
             bindings = <
                 &trans  &kp N1    &kp N2    &kp N3    &kp N4     &kp N5     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0     &trans
                 &trans  &sk LALT  &sk LCTRL &sk LGUI  &sk LSHIFT &caps_word &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &caps_word &trans
-                &trans  &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)  &trans     &kp INS  &kp PG_DN &kp PG_UP &kp HOME  &kp END    &trans
+                &trans  &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)  &kp LC(B)  &kp INS  &kp PG_DN &kp PG_UP &kp HOME  &kp END    &trans
                 &trans  &trans &trans &trans &trans &trans
                 >;
         };
