@@ -23,10 +23,10 @@
             //--------------------|     |     |     |---|     |     |     |-------------------
             // -------------------------------------------------------------------------------
             bindings = <
-                &none  &kp Q        &kp W       &kp E &kp R &kp T &kp Y &kp U &kp I     &kp O        &kp BSPC       &none
-                &none  &kp A        &kp S       &kp D &kp F &kp G &kp H &kp J &kp K     &kp L        &kp P          &none
-                &none  &kp Z  &kp X  &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp FSLH &none
-                &mt LGUI DEL &mt LSHIFT TAB &lt 1 SPACE &lt 2 RET &mt RSHIFT ESC &mt RCTRL BSPC
+                &none  &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I     &kp O        &kp BSPC       &none
+                &none  &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K     &kp L        &kp P          &none
+                &none  &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp FSLH &none
+                &mt LCTRL DEL &mt LGUI TAB &lt 1 SPACE &lt 2 RET &mt RSHIFT ESC &mt RCTRL BSPC
                 >;
         };
 
